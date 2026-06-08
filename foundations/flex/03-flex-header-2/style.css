@@ -10,17 +10,13 @@ body {
 
 .header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; /* positions the two divs (left and rgiht) to the edge of the webpage */
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
 }
 
 .profile-image {
-  display: flex;
-  justify-content: flex-end;
   background: rebeccapurple;
   margin: 10px;
   box-shadow: inset 2px 2px 4px rgba(0,0,0,.5);
@@ -30,18 +26,14 @@ body {
 }
 
 .logo {
-  display: flex;
   color: rebeccapurple;
   font-size: 32px;
   font-weight: 900;
   font-style: italic;
-  margin: 10px;
 }
 
 button {
-  display: flex;
   margin: 10px;
-  justify-self: flex-end;
   border: none;
   border-radius: 8px;
   background: rebeccapurple;
@@ -57,9 +49,14 @@ a {
 }
 
 ul {
-  display: flex;
-  flex-direction: row;
-  flex: 1 1 auto;
+  display: flex; /* this makes the list horizontal because flexbox is horizontal in default */
+  gap: 16px; /* gaps between the items in the div */
   margin: 10px;
-  list-style-type: none;
+  list-style-type: none; /* the marker is default - a black circle */
+}
+
+.left, .right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
